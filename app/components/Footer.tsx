@@ -38,14 +38,14 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4 text-secondary">Follow Us</h4>
             <div className="flex space-x-4">
-              <Link href="https://www.facebook.com/profile.php?id=61571809799117&mibextid=ZbWKwL" className="text-gray-400 hover:text-secondary transition-colors duration-300">
+              <Link href="https://www.facebook.com/profile.php?id=61571809799117&mibextid=ZbWKwL" aria-label="Facebook page link" className="text-gray-400 hover:text-secondary transition-colors duration-300">
                 <FaFacebook size={24} />
               </Link>
              
-              <Link href="https://www.linkedin.com/company/mcodev-bytes" className="text-gray-400 hover:text-secondary transition-colors duration-300">
+              <Link href="https://www.linkedin.com/company/mcodev-bytes"  aria-label="linkedin page link" className="text-gray-400 hover:text-secondary transition-colors duration-300">
                 <FaLinkedin size={24} />
               </Link>
-              <a href="https://www.instagram.com/mcodev_bytes?igsh=MWh1ZXQ4MmE4OGM3" className="text-gray-400 hover:text-secondary transition-colors duration-300">
+              <a href="https://www.instagram.com/mcodev_bytes?igsh=MWh1ZXQ4MmE4OGM3"  aria-label="Instagram page link" className="text-gray-400 hover:text-secondary transition-colors duration-300">
                 <FaInstagram size={24} />
               </a>
             </div>

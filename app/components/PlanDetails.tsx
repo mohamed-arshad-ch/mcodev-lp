@@ -41,6 +41,7 @@ export default function PlanDetails({ plan }: { plan: Plan }) {
             <Link
               href={`https://wa.me/919847274569?text=${whatsappMessage}`}
               target="_blank"
+              aria-label="Whatsapp Button label"
               rel="noopener noreferrer"
               className="block w-full bg-secondary text-primary py-3 px-4 rounded-full hover:bg-secondary-light transition-colors duration-300 text-center"
             >
