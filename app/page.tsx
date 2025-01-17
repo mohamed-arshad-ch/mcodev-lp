@@ -6,6 +6,9 @@ import FeaturesHighlightsSection from './components/FeaturesHighlightsSection'
 import TestimonialsSection from './components/TestimonialsSection'
 import ContactSection from './components/ContactSection'
 import Head from 'next/head'
+import { Metadata } from 'next'
+
+
 
 const schema = {
   "@context": "https://schema.org",
@@ -27,6 +30,47 @@ const schema = {
     "availableLanguage": "English"
   }
 }
+
+
+export const metadata: Metadata = {
+  title: 'Mcodev Bytes | Innovative Software Solutions',
+  description:
+    'Mcodev Bytes is a leading software development company offering web and mobile app development, AI integration, and custom enterprise solutions to drive your business success.',
+  openGraph: {
+    title: 'Mcodev Bytes | Innovative Software Solutions',
+    description:
+      'Partner with Mcodev Bytes for cutting-edge software solutions, including web and mobile app development, AI-powered tools, and enterprise software.',
+    url: 'https://www.mcodevbytes.in',
+    siteName: 'Mcodev Bytes',
+    images: [
+      {
+        url: 'https://www.mcodevbytes.in/mcodev-logo-1.png',
+        width: 1200,
+        height: 630,
+        alt: 'Mcodev Bytes Logo',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Mcodev Bytes | Innovative Software Solutions',
+    description:
+      'Explore Mcodev Bytes for industry-leading web and mobile app development, AI-powered tools, and enterprise software.',
+    images: ['https://www.mcodevbytes.in/mcodev-logo-1.png'],
+    site: '@mcodevbytes', // Replace with the official Twitter handle
+  },
+ icons:[
+  {rel:"apple-touch-icon",url:"/apple-touch-icon.png",sizes:"180x180"},
+  {rel:"icon",url:"/apple-touch-icon.png",sizes:"32x32",type:"image/png"},
+  {rel:"icon",url:"/apple-touch-icon.png",sizes:"16x16",type:"image/png"},
+ 
+ ],
+ manifest:"/site.webmanifest"
+};
+
+
 
 
 export default function Home() {
@@ -70,10 +114,11 @@ export default function Home() {
 {/* <!-- Robots Meta Tag --> */}
 <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large" />
 
-{/* <!-- Favicon --> */}
-<link rel="icon" href="https://www.mcodevbytes.in/mcodev-logo-1.png" />
 
-{/* <!-- Additional Schema.org JSON-LD Structured Data --> */}
+
+
+{/* <!-- Additional Schema.org JSO
+N-LD Structured Data --> */}
 <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}

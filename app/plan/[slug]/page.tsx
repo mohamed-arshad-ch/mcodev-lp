@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import PlanDetails from '../../components/PlanDetails'
 import Layout from '@/app/components/Layout'
+import { Metadata } from 'next';
 
 const plans = {
   'bytes-basic': {
@@ -55,6 +56,46 @@ const plans = {
     ],
   },
 }
+
+export const metadata: Metadata = {
+  title: 'Mcodev Bytes | Package Details',
+  description:
+    'Mcodev Bytes is a leading software development company offering web and mobile app development, AI integration, and custom enterprise solutions to drive your business success.',
+  openGraph: {
+    title: 'Mcodev Bytes | Innovative Software Solutions',
+    description:
+      'Partner with Mcodev Bytes for cutting-edge software solutions, including web and mobile app development, AI-powered tools, and enterprise software.',
+    url: 'https://www.mcodevbytes.in',
+    siteName: 'Mcodev Bytes',
+    images: [
+      {
+        url: 'https://www.mcodevbytes.in/mcodev-logo-1.png',
+        width: 1200,
+        height: 630,
+        alt: 'Mcodev Bytes Logo',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Mcodev Bytes | Innovative Software Solutions',
+    description:
+      'Explore Mcodev Bytes for industry-leading web and mobile app development, AI-powered tools, and enterprise software.',
+    images: ['https://www.mcodevbytes.in/mcodev-logo-1.png'],
+    site: '@mcodevbytes', // Replace with the official Twitter handle
+  },
+ icons:[
+  {rel:"apple-touch-icon",url:"/apple-touch-icon.png",sizes:"180x180"},
+  {rel:"icon",url:"/apple-touch-icon.png",sizes:"32x32",type:"image/png"},
+  {rel:"icon",url:"/apple-touch-icon.png",sizes:"16x16",type:"image/png"},
+ 
+ ],
+ manifest:"/site.webmanifest"
+};
+
+
 
 export default function PlanPage({ params }: { params: { slug: string } }) {
   const plan = plans[params.slug as keyof typeof plans]
